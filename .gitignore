@@ -1,0 +1,4 @@
+.env
+Sample - Superstore.csv
+__pycache__/
+*.pyc

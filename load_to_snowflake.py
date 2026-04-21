@@ -1,6 +1,10 @@
 import snowflake.connector
 import pandas as pd
 from snowflake.connector.pandas_tools import write_pandas
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 # Load the CSV
 df = pd.read_csv('Sample - Superstore.csv', encoding='latin1')
@@ -13,9 +17,9 @@ print(df.columns.tolist())
 
 # Connect to Snowflake
 conn = snowflake.connector.connect(
-    user='VIVIAN05',
-    password='Mshelbwala05##',
-    account='RDKXEEE-US81449',
+    user=os.getenv('SNOWFLAKE_USER'),
+    password=os.getenv('SNOWFLAKE_PASSWORD'),
+    account=os.getenv('SNOWFLAKE_ACCOUNT'),
     warehouse='COMPUTE_WH',
     database='SALES_PIPELINE',
     schema='RAW'
