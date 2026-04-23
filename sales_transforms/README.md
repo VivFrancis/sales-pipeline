@@ -18,6 +18,14 @@ Raw CSV → Python → Snowflake → dbt → Power BI
 ## Data
 Superstore Sales Dataset (9,994 rows) covering sales transactions 
 from 2014–2017 across the United States.
+Download the dataset free from Kaggle:
+https://www.kaggle.com/datasets/vivek468/superstore-dataset-final
+
+Once downloaded, rename the file to `Sample - Superstore.csv` and 
+place it in the root of the project folder.
+
+Note: Raw data files are not stored in this repository following 
+data engineering best practices.
 
 ## dbt Models
 | Model | Description |
@@ -35,7 +43,12 @@ from 2014–2017 across the United States.
 
 ## How to Run
 1. Clone the repo
-2. Create a `.env` file with your Snowflake credentials
-3. Run `pip install -r requirements.txt`
-4. Run `python load_to_snowflake.py`
-5. Run `dbt run` inside `sales_transforms`
+2. Download the dataset from Kaggle (link above)
+3. Rename it to `Sample - Superstore.csv` and place in root folder
+4. Create a `.env` file with your Snowflake credentials:
+   - SNOWFLAKE_USER=your_username
+   - SNOWFLAKE_PASSWORD=your_password
+   - SNOWFLAKE_ACCOUNT=your_account
+5. Run `pip install -r requirements.txt`
+6. Run `python load_to_snowflake.py`
+7. Run `dbt run` inside `sales_transforms`
