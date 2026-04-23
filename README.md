@@ -50,6 +50,12 @@ Note: Raw data files are not stored in this repository, following data engineeri
 
 - Technology category leads with $330K revenue
 
+
+## Dashboard Preview
+
+![Sales Performance Dashboard](dashboard.png)
+
+
 ## How to Run
 
 1. Clone the repo
